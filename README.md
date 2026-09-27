@@ -80,7 +80,7 @@ The design focuses on:
 
 ### 🔗 Figma Design
 
-[View Figma Design](YOUR_FIGMA_LINK_HERE)
+[View Figma Design](https://www.figma.com/design/nyraBPWp71HyGdNxnBABPG/Untitled?node-id=4-3&t=QkCbHxIbqoizIJzk-1)
 
 ## 🛠️ Technologies
 
@@ -97,22 +97,21 @@ The design focuses on:
 ```text
 clinic-booking-system/
 │
+├── image/
+├── images/
+├── img/
+│
 ├── index.html
 ├── team.html
 ├── booking.html
-├── test.html
+├── testing.html
 │
-├── css/
-│   ├── style.css
-│   └── test.css
+├── style.css
+├── team.css
+├── booking.css
 │
-├── js/
-│   ├── main.js
-│   ├── calendar.js
-│   └── booking.js
-│
-├── assets/
-│   └── images/
+├── main.js
+├── mainbooking.js
 │
 └── README.md
 ```
@@ -165,7 +164,7 @@ git clone https://github.com/sataratimoori/clinic-booking-system.git
 
 ## 🌐 Live Demo
 
-🔗 [View Live Project](YOUR_LIVE_PROJECT_LINK_HERE)
+🔗 [View Live Project](https://sataratimoori.github.io/clinic-booking-system/)
 
 
 
