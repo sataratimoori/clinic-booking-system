@@ -218,6 +218,10 @@ body {
 
     margin-bottom: 9px;
 }
+.feature-icon:hover{
+    background-color: #031a38;
+    color: white;
+}
 
 
 .hero-features h6 {
