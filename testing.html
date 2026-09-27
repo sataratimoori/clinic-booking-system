@@ -570,6 +570,965 @@
 
     </style>
 <body>
+    <div class="testing-box">
+
+    <!-- HEADER -->
+
+    <div class="testing-header">
+
+        <div class="header-content">
+
+            <div class="testing-icon">
+                <i class="bi bi-clipboard2-check"></i>
+            </div>
+
+            <div class="title-area">
+                <h1>Website Testing</h1>
+                <p>Doctor Booking Website — Test Case Management</p>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- SUMMARY -->
+
+    <div class="test-summary">
+
+        <div class="summary-item">
+            <i class="bi bi-file-earmark-check"></i>
+            12 Test Cases
+        </div>
+
+        <div class="summary-item">
+            <i class="bi bi-house"></i>
+            7 Home Tests
+        </div>
+
+        <div class="summary-item">
+            <i class="bi bi-people"></i>
+            2 Team Tests
+        </div>
+
+        <div class="summary-item">
+            <i class="bi bi-calendar2-check"></i>
+            3 Booking Tests
+        </div>
+
+    </div>
+
+
+    <!-- TABLE -->
+
+    <div class="table-container">
+
+        <table class="testing-table">
+
+            <thead>
+
+                <tr>
+                    <th>Test ID</th>
+                    <th>Page / Section</th>
+                    <th>Test Case</th>
+                    <th>Steps</th>
+                    <th>Expected Result</th>
+                    <th>Status</th>
+                </tr>
+
+            </thead>
+
+
+            <tbody>
+
+
+                <!-- =========================
+                     HOME PAGE
+                ========================== -->
+
+                <tr class="section-row">
+                    <td colspan="6">Home Page</td>
+                </tr>
+
+
+                <!-- TC-001 -->
+
+                <tr>
+
+                    <td>TC-001</td>
+
+                    <td>Home – Navigation</td>
+
+                    <td>Navigation link functionality</td>
+
+                    <td>Click each navigation link</td>
+
+                    <td>
+                        <input
+                            type="text"
+                            class="expected-input"
+                            data-test="TC-001"
+                            placeholder="Type result..."
+                        >
+                    </td>
+
+                    <td>
+                        <div class="status-wrapper">
+
+                            <button
+                                class="status-button pending"
+                                type="button"
+                            >
+                                <span class="status-left">
+                                    <i class="bi bi-clock"></i>
+                                    <span class="status-text">
+                                        Pending
+                                    </span>
+                                </span>
+
+                                <i class="bi bi-chevron-down arrow"></i>
+                            </button>
+
+                            <div class="status-menu">
+
+                                <button
+                                    class="status-option pending-option"
+                                    onclick="setStatus(this,'pending','Pending','bi-clock')"
+                                >
+                                    <i class="bi bi-clock"></i>
+                                    Pending
+                                </button>
+
+                                <button
+                                    class="status-option pass-option"
+                                    onclick="setStatus(this,'pass','Pass','bi-check-lg')"
+                                >
+                                    <i class="bi bi-check-lg"></i>
+                                    Pass
+                                </button>
+
+                                <button
+                                    class="status-option fail-option"
+                                    onclick="setStatus(this,'fail','Fail','bi-x-lg')"
+                                >
+                                    <i class="bi bi-x-lg"></i>
+                                    Fail
+                                </button>
+
+                            </div>
+
+                        </div>
+                    </td>
+
+                </tr>
+
+
+                <!-- TC-002 -->
+
+                <tr>
+
+                    <td>TC-002</td>
+
+                    <td>Home – Hero Section</td>
+
+                    <td>Hero section display</td>
+
+                    <td>Open the Home page and review the Hero section</td>
+
+                    <td>
+                        <input
+                            type="text"
+                            class="expected-input"
+                            data-test="TC-002"
+                            placeholder="Type result..."
+                        >
+                    </td>
+
+                    <td>
+                        <div class="status-wrapper">
+
+                            <button class="status-button pending" type="button">
+
+                                <span class="status-left">
+                                    <i class="bi bi-clock"></i>
+                                    <span class="status-text">
+                                        Pending
+                                    </span>
+                                </span>
+
+                                <i class="bi bi-chevron-down arrow"></i>
+
+                            </button>
+
+                            <div class="status-menu">
+
+                                <button
+                                    class="status-option pending-option"
+                                    onclick="setStatus(this,'pending','Pending','bi-clock')"
+                                >
+                                    <i class="bi bi-clock"></i>
+                                    Pending
+                                </button>
+
+                                <button
+                                    class="status-option pass-option"
+                                    onclick="setStatus(this,'pass','Pass','bi-check-lg')"
+                                >
+                                    <i class="bi bi-check-lg"></i>
+                                    Pass
+                                </button>
+
+                                <button
+                                    class="status-option fail-option"
+                                    onclick="setStatus(this,'fail','Fail','bi-x-lg')"
+                                >
+                                    <i class="bi bi-x-lg"></i>
+                                    Fail
+                                </button>
+
+                            </div>
+
+                        </div>
+                    </td>
+
+                </tr>
+
+
+                <!-- TC-003 -->
+
+                <tr>
+
+                    <td>TC-003</td>
+
+                    <td>Home – Service Cards</td>
+
+                    <td>Service card hover interaction</td>
+
+                    <td>Hover over each service card</td>
+
+                    <td>
+                        <input
+                            type="text"
+                            class="expected-input"
+                            data-test="TC-003"
+                            placeholder="Type result..."
+                        >
+                    </td>
+
+                    <td>
+                        <div class="status-wrapper">
+
+                            <button class="status-button pending" type="button">
+
+                                <span class="status-left">
+                                    <i class="bi bi-clock"></i>
+                                    <span class="status-text">
+                                        Pending
+                                    </span>
+                                </span>
+
+                                <i class="bi bi-chevron-down arrow"></i>
+
+                            </button>
+
+                            <div class="status-menu">
+
+                                <button
+                                    class="status-option pending-option"
+                                    onclick="setStatus(this,'pending','Pending','bi-clock')"
+                                >
+                                    <i class="bi bi-clock"></i>
+                                    Pending
+                                </button>
+
+                                <button
+                                    class="status-option pass-option"
+                                    onclick="setStatus(this,'pass','Pass','bi-check-lg')"
+                                >
+                                    <i class="bi bi-check-lg"></i>
+                                    Pass
+                                </button>
+
+                                <button
+                                    class="status-option fail-option"
+                                    onclick="setStatus(this,'fail','Fail','bi-x-lg')"
+                                >
+                                    <i class="bi bi-x-lg"></i>
+                                    Fail
+                                </button>
+
+                            </div>
+
+                        </div>
+                    </td>
+
+                </tr>
+
+
+                <!-- TC-004 -->
+
+                <tr>
+
+                    <td>TC-004</td>
+
+                    <td>Home – About Section</td>
+
+                    <td>About section content display</td>
+
+                    <td>Scroll to the About section</td>
+
+                    <td>
+                        <input
+                            type="text"
+                            class="expected-input"
+                            data-test="TC-004"
+                            placeholder="Type result..."
+                        >
+                    </td>
+
+                    <td>
+                        <div class="status-wrapper">
+
+                            <button class="status-button pending" type="button">
+
+                                <span class="status-left">
+                                    <i class="bi bi-clock"></i>
+                                    <span class="status-text">
+                                        Pending
+                                    </span>
+                                </span>
+
+                                <i class="bi bi-chevron-down arrow"></i>
+
+                            </button>
+
+                            <div class="status-menu">
+
+                                <button
+                                    class="status-option pending-option"
+                                    onclick="setStatus(this,'pending','Pending','bi-clock')"
+                                >
+                                    <i class="bi bi-clock"></i>
+                                    Pending
+                                </button>
+
+                                <button
+                                    class="status-option pass-option"
+                                    onclick="setStatus(this,'pass','Pass','bi-check-lg')"
+                                >
+                                    <i class="bi bi-check-lg"></i>
+                                    Pass
+                                </button>
+
+                                <button
+                                    class="status-option fail-option"
+                                    onclick="setStatus(this,'fail','Fail','bi-x-lg')"
+                                >
+                                    <i class="bi bi-x-lg"></i>
+                                    Fail
+                                </button>
+
+                            </div>
+
+                        </div>
+                    </td>
+
+                </tr>
+
+
+                <!-- TC-005 -->
+
+                <tr>
+
+                    <td>TC-005</td>
+
+                    <td>Home – Booking Form</td>
+
+                    <td>Appointment form submission</td>
+
+                    <td>Enter valid information and submit the form</td>
+
+                    <td>
+                        <input
+                            type="text"
+                            class="expected-input"
+                            data-test="TC-005"
+                            placeholder="Type result..."
+                        >
+                    </td>
+
+                    <td>
+                        <div class="status-wrapper">
+
+                            <button class="status-button pending" type="button">
+
+                                <span class="status-left">
+                                    <i class="bi bi-clock"></i>
+                                    <span class="status-text">
+                                        Pending
+                                    </span>
+                                </span>
+
+                                <i class="bi bi-chevron-down arrow"></i>
+
+                            </button>
+
+                            <div class="status-menu">
+
+                                <button
+                                    class="status-option pending-option"
+                                    onclick="setStatus(this,'pending','Pending','bi-clock')"
+                                >
+                                    <i class="bi bi-clock"></i>
+                                    Pending
+                                </button>
+
+                                <button
+                                    class="status-option pass-option"
+                                    onclick="setStatus(this,'pass','Pass','bi-check-lg')"
+                                >
+                                    <i class="bi bi-check-lg"></i>
+                                    Pass
+                                </button>
+
+                                <button
+                                    class="status-option fail-option"
+                                    onclick="setStatus(this,'fail','Fail','bi-x-lg')"
+                                >
+                                    <i class="bi bi-x-lg"></i>
+                                    Fail
+                                </button>
+
+                            </div>
+
+                        </div>
+                    </td>
+
+                </tr>
+
+
+                <!-- TC-006 -->
+
+                <tr>
+
+                    <td>TC-006</td>
+
+                    <td>Home – Footer</td>
+
+                    <td>Footer content and links</td>
+
+                    <td>Scroll to the bottom of the page</td>
+
+                    <td>
+                        <input
+                            type="text"
+                            class="expected-input"
+                            data-test="TC-006"
+                            placeholder="Type result..."
+                        >
+                    </td>
+
+                    <td>
+                        <div class="status-wrapper">
+
+                            <button class="status-button pending" type="button">
+
+                                <span class="status-left">
+                                    <i class="bi bi-clock"></i>
+                                    <span class="status-text">
+                                        Pending
+                                    </span>
+                                </span>
+
+                                <i class="bi bi-chevron-down arrow"></i>
+
+                            </button>
+
+                            <div class="status-menu">
+
+                                <button
+                                    class="status-option pending-option"
+                                    onclick="setStatus(this,'pending','Pending','bi-clock')"
+                                >
+                                    <i class="bi bi-clock"></i>
+                                    Pending
+                                </button>
+
+                                <button
+                                    class="status-option pass-option"
+                                    onclick="setStatus(this,'pass','Pass','bi-check-lg')"
+                                >
+                                    <i class="bi bi-check-lg"></i>
+                                    Pass
+                                </button>
+
+                                <button
+                                    class="status-option fail-option"
+                                    onclick="setStatus(this,'fail','Fail','bi-x-lg')"
+                                >
+                                    <i class="bi bi-x-lg"></i>
+                                    Fail
+                                </button>
+
+                            </div>
+
+                        </div>
+                    </td>
+
+                </tr>
+
+
+                <!-- TC-007 -->
+
+                <tr>
+
+                    <td>TC-007</td>
+
+                    <td>Home – Responsive Design</td>
+
+                    <td>Responsive layout behavior</td>
+
+                    <td>Resize the browser window</td>
+
+                    <td>
+                        <input
+                            type="text"
+                            class="expected-input"
+                            data-test="TC-007"
+                            placeholder="Type result..."
+                        >
+                    </td>
+
+                    <td>
+                        <div class="status-wrapper">
+
+                            <button class="status-button pending" type="button">
+
+                                <span class="status-left">
+                                    <i class="bi bi-clock"></i>
+                                    <span class="status-text">
+                                        Pending
+                                    </span>
+                                </span>
+
+                                <i class="bi bi-chevron-down arrow"></i>
+
+                            </button>
+
+                            <div class="status-menu">
+
+                                <button
+                                    class="status-option pending-option"
+                                    onclick="setStatus(this,'pending','Pending','bi-clock')"
+                                >
+                                    <i class="bi bi-clock"></i>
+                                    Pending
+                                </button>
+
+                                <button
+                                    class="status-option pass-option"
+                                    onclick="setStatus(this,'pass','Pass','bi-check-lg')"
+                                >
+                                    <i class="bi bi-check-lg"></i>
+                                    Pass
+                                </button>
+
+                                <button
+                                    class="status-option fail-option"
+                                    onclick="setStatus(this,'fail','Fail','bi-x-lg')"
+                                >
+                                    <i class="bi bi-x-lg"></i>
+                                    Fail
+                                </button>
+
+                            </div>
+
+                        </div>
+                    </td>
+
+                </tr>
+
+
+                <!-- =========================
+                     OUR TEAM
+                ========================== -->
+
+                <tr class="section-row">
+                    <td colspan="6">Our Team</td>
+                </tr>
+
+
+                <!-- TC-008 -->
+
+                <tr>
+
+                    <td>TC-008</td>
+
+                    <td>Our Team – Doctors</td>
+
+                    <td>Doctors carousel navigation</td>
+
+                    <td>Click the carousel navigation arrows</td>
+
+                    <td>
+                        <input
+                            type="text"
+                            class="expected-input"
+                            data-test="TC-008"
+                            placeholder="Type result..."
+                        >
+                    </td>
+
+                    <td>
+                        <div class="status-wrapper">
+
+                            <button class="status-button pending" type="button">
+
+                                <span class="status-left">
+                                    <i class="bi bi-clock"></i>
+                                    <span class="status-text">
+                                        Pending
+                                    </span>
+                                </span>
+
+                                <i class="bi bi-chevron-down arrow"></i>
+
+                            </button>
+
+                            <div class="status-menu">
+
+                                <button
+                                    class="status-option pending-option"
+                                    onclick="setStatus(this,'pending','Pending','bi-clock')"
+                                >
+                                    <i class="bi bi-clock"></i>
+                                    Pending
+                                </button>
+
+                                <button
+                                    class="status-option pass-option"
+                                    onclick="setStatus(this,'pass','Pass','bi-check-lg')"
+                                >
+                                    <i class="bi bi-check-lg"></i>
+                                    Pass
+                                </button>
+
+                                <button
+                                    class="status-option fail-option"
+                                    onclick="setStatus(this,'fail','Fail','bi-x-lg')"
+                                >
+                                    <i class="bi bi-x-lg"></i>
+                                    Fail
+                                </button>
+
+                            </div>
+
+                        </div>
+                    </td>
+
+                </tr>
+
+
+                <!-- TC-009 -->
+
+                <tr>
+
+                    <td>TC-009</td>
+
+                    <td>Our Team – Support</td>
+
+                    <td>Support team carousel navigation</td>
+
+                    <td>Click the carousel navigation arrows</td>
+
+                    <td>
+                        <input
+                            type="text"
+                            class="expected-input"
+                            data-test="TC-009"
+                            placeholder="Type result..."
+                        >
+                    </td>
+
+                    <td>
+                        <div class="status-wrapper">
+
+                            <button class="status-button pending" type="button">
+
+                                <span class="status-left">
+                                    <i class="bi bi-clock"></i>
+                                    <span class="status-text">
+                                        Pending
+                                    </span>
+                                </span>
+
+                                <i class="bi bi-chevron-down arrow"></i>
+
+                            </button>
+
+                            <div class="status-menu">
+
+                                <button
+                                    class="status-option pending-option"
+                                    onclick="setStatus(this,'pending','Pending','bi-clock')"
+                                >
+                                    <i class="bi bi-clock"></i>
+                                    Pending
+                                </button>
+
+                                <button
+                                    class="status-option pass-option"
+                                    onclick="setStatus(this,'pass','Pass','bi-check-lg')"
+                                >
+                                    <i class="bi bi-check-lg"></i>
+                                    Pass
+                                </button>
+
+                                <button
+                                    class="status-option fail-option"
+                                    onclick="setStatus(this,'fail','Fail','bi-x-lg')"
+                                >
+                                    <i class="bi bi-x-lg"></i>
+                                    Fail
+                                </button>
+
+                            </div>
+
+                        </div>
+                    </td>
+
+                </tr>
+
+
+                <!-- =========================
+                     BOOKING PAGE
+                ========================== -->
+
+                <tr class="section-row">
+                    <td colspan="6">Booking Page</td>
+                </tr>
+
+
+                <!-- TC-010 -->
+
+                <tr>
+
+                    <td>TC-010</td>
+
+                    <td>Booking – Doctor Cards</td>
+
+                    <td>Doctor card interaction</td>
+
+                    <td>Hover over a doctor card</td>
+
+                    <td>
+                        <input
+                            type="text"
+                            class="expected-input"
+                            data-test="TC-010"
+                            placeholder="Type result..."
+                        >
+                    </td>
+
+                    <td>
+                        <div class="status-wrapper">
+
+                            <button class="status-button pending" type="button">
+
+                                <span class="status-left">
+                                    <i class="bi bi-clock"></i>
+                                    <span class="status-text">
+                                        Pending
+                                    </span>
+                                </span>
+
+                                <i class="bi bi-chevron-down arrow"></i>
+
+                            </button>
+
+                            <div class="status-menu">
+
+                                <button
+                                    class="status-option pending-option"
+                                    onclick="setStatus(this,'pending','Pending','bi-clock')"
+                                >
+                                    <i class="bi bi-clock"></i>
+                                    Pending
+                                </button>
+
+                                <button
+                                    class="status-option pass-option"
+                                    onclick="setStatus(this,'pass','Pass','bi-check-lg')"
+                                >
+                                    <i class="bi bi-check-lg"></i>
+                                    Pass
+                                </button>
+
+                                <button
+                                    class="status-option fail-option"
+                                    onclick="setStatus(this,'fail','Fail','bi-x-lg')"
+                                >
+                                    <i class="bi bi-x-lg"></i>
+                                    Fail
+                                </button>
+
+                            </div>
+
+                        </div>
+                    </td>
+
+                </tr>
+
+
+                <!-- TC-011 -->
+
+                <tr>
+
+                    <td>TC-011</td>
+
+                    <td>Booking – Appointment Button</td>
+
+                    <td>Appointment button functionality</td>
+
+                    <td>Click the appointment button</td>
+
+                    <td>
+                        <input
+                            type="text"
+                            class="expected-input"
+                            data-test="TC-011"
+                            placeholder="Type result..."
+                        >
+                    </td>
+
+                    <td>
+                        <div class="status-wrapper">
+
+                            <button class="status-button pending" type="button">
+
+                                <span class="status-left">
+                                    <i class="bi bi-clock"></i>
+                                    <span class="status-text">
+                                        Pending
+                                    </span>
+                                </span>
+
+                                <i class="bi bi-chevron-down arrow"></i>
+
+                            </button>
+
+                            <div class="status-menu">
+
+                                <button
+                                    class="status-option pending-option"
+                                    onclick="setStatus(this,'pending','Pending','bi-clock')"
+                                >
+                                    <i class="bi bi-clock"></i>
+                                    Pending
+                                </button>
+
+                                <button
+                                    class="status-option pass-option"
+                                    onclick="setStatus(this,'pass','Pass','bi-check-lg')"
+                                >
+                                    <i class="bi bi-check-lg"></i>
+                                    Pass
+                                </button>
+
+                                <button
+                                    class="status-option fail-option"
+                                    onclick="setStatus(this,'fail','Fail','bi-x-lg')"
+                                >
+                                    <i class="bi bi-x-lg"></i>
+                                    Fail
+                                </button>
+
+                            </div>
+
+                        </div>
+                    </td>
+
+                </tr>
+
+
+                <!-- TC-012 -->
+
+                <tr>
+
+                    <td>TC-012</td>
+
+                    <td>Booking – Appointment Modal</td>
+
+                    <td>Appointment modal functionality</td>
+
+                    <td>Click the appointment button and open the modal</td>
+
+                    <td>
+                        <input
+                            type="text"
+                            class="expected-input"
+                            data-test="TC-012"
+                            placeholder="Type result..."
+                        >
+                    </td>
+
+                    <td>
+                        <div class="status-wrapper">
+
+                            <button class="status-button pending" type="button">
+
+                                <span class="status-left">
+                                    <i class="bi bi-clock"></i>
+                                    <span class="status-text">
+                                        Pending
+                                    </span>
+                                </span>
+
+                                <i class="bi bi-chevron-down arrow"></i>
+
+                            </button>
+
+                            <div class="status-menu">
+
+                                <button
+                                    class="status-option pending-option"
+                                    onclick="setStatus(this,'pending','Pending','bi-clock')"
+                                >
+                                    <i class="bi bi-clock"></i>
+                                    Pending
+                                </button>
+
+                                <button
+                                    class="status-option pass-option"
+                                    onclick="setStatus(this,'pass','Pass','bi-check-lg')"
+                                >
+                                    <i class="bi bi-check-lg"></i>
+                                    Pass
+                                </button>
+
+                                <button
+                                    class="status-option fail-option"
+                                    onclick="setStatus(this,'fail','Fail','bi-x-lg')"
+                                >
+                                    <i class="bi bi-x-lg"></i>
+                                    Fail
+                                </button>
+
+                            </div>
+
+                        </div>
+                    </td>
+
+                </tr>
+
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>
     
 </body>
 </html>
