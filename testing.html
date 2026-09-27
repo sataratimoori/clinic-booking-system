@@ -1529,6 +1529,273 @@
     </div>
 
 </div>
+
+<script>
+
+    const STATUS_KEY =
+        "doctor_booking_testing_status";
+
+    const RESULT_KEY =
+        "doctor_booking_expected_results";
+
+
+    /* =========================
+       STATUS
+    ========================== */
+
+    function setStatus(
+        button,
+        status,
+        text,
+        icon
+    ) {
+
+        const wrapper =
+            button.closest(".status-wrapper");
+
+        const statusButton =
+            wrapper.querySelector(".status-button");
+
+        const statusText =
+            statusButton.querySelector(".status-text");
+
+        const statusIcon =
+            statusButton.querySelector(".status-left i");
+
+        const row =
+            button.closest("tr");
+
+        const testId =
+            row.cells[0].textContent.trim();
+
+
+        statusButton.classList.remove(
+            "pending",
+            "pass",
+            "fail"
+        );
+
+        statusButton.classList.add(status);
+
+        statusText.textContent = text;
+
+        statusIcon.className =
+            "bi " + icon;
+
+
+        const savedStatuses =
+            JSON.parse(
+                localStorage.getItem(STATUS_KEY)
+            ) || {};
+
+
+        savedStatuses[testId] = {
+            status: status,
+            text: text,
+            icon: icon
+        };
+
+
+        localStorage.setItem(
+            STATUS_KEY,
+            JSON.stringify(savedStatuses)
+        );
+
+
+        wrapper.classList.remove("active");
+
+    }
+
+
+    /* =========================
+       OPEN STATUS MENU
+    ========================== */
+
+    document.addEventListener(
+        "click",
+        function(e) {
+
+            const wrapper =
+                e.target.closest(".status-wrapper");
+
+
+            document
+                .querySelectorAll(".status-wrapper")
+                .forEach(item => {
+
+                    if (item !== wrapper) {
+                        item.classList.remove("active");
+                    }
+
+                });
+
+
+            if (
+                wrapper &&
+                e.target.closest(".status-button")
+            ) {
+
+                wrapper.classList.toggle("active");
+
+            }
+
+        }
+    );
+
+
+    /* =========================
+       EXPECTED RESULT
+    ========================== */
+
+    document
+        .querySelectorAll(".expected-input")
+        .forEach(input => {
+
+            input.addEventListener(
+                "input",
+                function() {
+
+                    const testId =
+                        this.dataset.test;
+
+                    const results =
+                        JSON.parse(
+                            localStorage.getItem(RESULT_KEY)
+                        ) || {};
+
+
+                    results[testId] =
+                        this.value;
+
+
+                    localStorage.setItem(
+                        RESULT_KEY,
+                        JSON.stringify(results)
+                    );
+
+                }
+            );
+
+        });
+
+
+    /* =========================
+       LOAD SAVED DATA
+    ========================== */
+
+    document.addEventListener(
+        "DOMContentLoaded",
+        function() {
+
+            /* Load Status */
+
+            const savedStatuses =
+                JSON.parse(
+                    localStorage.getItem(STATUS_KEY)
+                ) || {};
+
+
+            document
+                .querySelectorAll(
+                    ".testing-table tbody tr"
+                )
+                .forEach(row => {
+
+                    if (!row.cells[0]) return;
+
+
+                    const testId =
+                        row.cells[0]
+                            .textContent
+                            .trim();
+
+
+                    const saved =
+                        savedStatuses[testId];
+
+
+                    if (!saved) return;
+
+
+                    const statusButton =
+                        row.querySelector(
+                            ".status-button"
+                        );
+
+                    const statusText =
+                        row.querySelector(
+                            ".status-text"
+                        );
+
+                    const statusIcon =
+                        row.querySelector(
+                            ".status-left i"
+                        );
+
+
+                    if (
+                        !statusButton ||
+                        !statusText ||
+                        !statusIcon
+                    ) return;
+
+
+                    statusButton.classList.remove(
+                        "pending",
+                        "pass",
+                        "fail"
+                    );
+
+
+                    statusButton.classList.add(
+                        saved.status
+                    );
+
+
+                    statusText.textContent =
+                        saved.text;
+
+
+                    statusIcon.className =
+                        "bi " + saved.icon;
+
+                });
+
+
+            /* Load Expected Results */
+
+            const savedResults =
+                JSON.parse(
+                    localStorage.getItem(RESULT_KEY)
+                ) || {};
+
+
+            document
+                .querySelectorAll(
+                    ".expected-input"
+                )
+                .forEach(input => {
+
+                    const testId =
+                        input.dataset.test;
+
+
+                    if (
+                        savedResults[testId]
+                        !== undefined
+                    ) {
+
+                        input.value =
+                            savedResults[testId];
+
+                    }
+
+                });
+
+        }
+    );
+
+</script>
     
 </body>
 </html>
