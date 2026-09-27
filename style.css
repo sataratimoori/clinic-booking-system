@@ -799,7 +799,7 @@ body {
 
 
 .product-card h5 {
-    font-size: 11px;
+    font-size: 14px;
 
     font-weight: 800;
 
@@ -810,7 +810,7 @@ body {
 .product-card p {
     color: #6d7d86;
 
-    font-size: 8px;
+    font-size: 12px;
 
     margin-bottom: 9px;
 }
@@ -1510,7 +1510,7 @@ body {
 
 .contact-item p {
 
-    font-size: 8px;
+    font-size: 12px;
 
     line-height: 1.45;
 
@@ -1540,6 +1540,9 @@ body {
 
     margin-bottom: 9px;
 
+}
+.social-title p{
+    font-size: 12px;
 }
 
 
@@ -1801,7 +1804,7 @@ body {
 .footer p,
 .footer a {
 
-    font-size: 8px;
+    font-size: 14px;
 
     line-height: 1.55;
 
