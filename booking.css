@@ -92,27 +92,22 @@
 
         /* Gradient hover */
 
-        .doctor-card::before {
-            content: "";
-            position: absolute;
-            inset: 0;
+  /* Simple hover effect for card body only */
 
-            background: linear-gradient(
-                135deg,
-                rgba(33,153,138,0.92),
-                rgba(19,111,101,0.92)
-            );
+.doctor-info {
+    transition: 0.3s;
+}
 
-            opacity: 0;
-            transition: 0.35s;
+.doctor-card:hover .doctor-info {
+    background: #21998A;
+    color: white;
+}
 
-            z-index: 1;
-            pointer-events: none;
-        }
-
-        .doctor-card:hover::before {
-            opacity: 1;
-        }
+.doctor-card:hover .specialty,
+.doctor-card:hover .doctor-type,
+.doctor-card:hover .description {
+    color: white;
+}
 
         .doctor-image {
             width: 100%;
