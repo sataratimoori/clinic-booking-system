@@ -1,0 +1,457 @@
+
+   
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f7faf9;
+            color: #1f2937;
+        }
+
+        /* ================= HEADER ================= */
+
+        header {
+            text-align: center;
+            padding: 55px 20px 30px;
+        }
+
+        header h1 {
+            font-size: 38px;
+            margin-bottom: 10px;
+            color: #173c38;
+        }
+
+        header p {
+            color: #6b7280;
+            font-size: 16px;
+        }
+
+        /* ================= FILTER ================= */
+
+        .filter-container {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin: 20px auto 45px;
+            padding: 0 20px;
+        }
+
+        .filter-btn {
+            border: none;
+            background: white;
+            color: #475569;
+            padding: 11px 22px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 14px;
+            box-shadow: 0 5px 18px rgba(0,0,0,0.07);
+            transition: 0.3s;
+        }
+
+        .filter-btn:hover,
+        .filter-btn.active {
+            background: #21998A;
+            color: white;
+        }
+
+        /* ================= DOCTORS ================= */
+
+        .doctor-container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 0 20px 70px;
+
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
+        }
+
+        .doctor-card {
+            background: white;
+            border-radius: 18px;
+            overflow: hidden;
+            position: relative;
+
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+
+            transition:
+                transform 0.35s ease,
+                box-shadow 0.35s ease;
+        }
+
+        .doctor-card:hover {
+            transform: translateY(-9px);
+            box-shadow: 0 20px 45px rgba(33,153,138,0.22);
+        }
+
+        /* Gradient hover */
+
+  /* Simple hover effect for card body only */
+
+.doctor-info {
+    transition: 0.3s;
+}
+
+.doctor-card:hover .doctor-info {
+    background: #21998A;
+    color: white;
+}
+
+.doctor-card:hover .specialty,
+.doctor-card:hover .doctor-type,
+.doctor-card:hover .description {
+    color: white;
+}
+
+        .doctor-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .doctor-info {
+            padding: 22px;
+            position: relative;
+            z-index: 2;
+            transition: 0.3s;
+        }
+
+        .doctor-card:hover .doctor-info {
+            color: white;
+        }
+
+        .doctor-info h3 {
+            font-size: 21px;
+            margin-bottom: 6px;
+        }
+
+        .specialty {
+            color: #21998A;
+            font-weight: bold;
+            font-size: 14px;
+            margin-bottom: 9px;
+        }
+
+        .doctor-card:hover .specialty {
+            color: white;
+        }
+
+        .doctor-type {
+            font-size: 13px;
+            margin-bottom: 12px;
+            color: #64748b;
+        }
+
+        .doctor-card:hover .doctor-type {
+            color: #e5fffb;
+        }
+
+        .description {
+            font-size: 14px;
+            line-height: 1.6;
+            color: #64748b;
+            margin-bottom: 20px;
+        }
+
+        .doctor-card:hover .description {
+            color: #f0fffd;
+        }
+
+        /* ================= BOOK BUTTON ================= */
+
+        .book-btn {
+            border: none;
+            background: #21998A;
+            color: white;
+
+            padding: 12px 20px;
+            width: 100%;
+
+            border-radius: 10px;
+            cursor: pointer;
+
+            font-size: 14px;
+            font-weight: bold;
+
+            box-shadow: 0 6px 15px rgba(33,153,138,0.25);
+
+            transition: 0.3s;
+        }
+
+        .book-btn:hover {
+            background: white;
+            color: #21998A;
+        }
+
+        /* ================= MODAL ================= */
+
+        .modal {
+            display: none;
+
+            position: fixed;
+            inset: 0;
+
+            background: rgba(15, 23, 42, 0.65);
+
+            justify-content: center;
+            align-items: center;
+
+            padding: 20px;
+
+            z-index: 1000;
+        }
+
+        .modal.active {
+            display: flex;
+        }
+
+        .modal-content {
+            background: white;
+            width: 100%;
+            max-width: 650px;
+
+            max-height: 90vh;
+            overflow-y: auto;
+
+            border-radius: 20px;
+            padding: 30px;
+
+            box-shadow: 0 25px 70px rgba(0,0,0,0.25);
+
+            animation: modalOpen 0.3s ease;
+        }
+
+        @keyframes modalOpen {
+
+            from {
+                opacity: 0;
+                transform: translateY(30px) scale(0.97);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+
+        }
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            margin-bottom: 25px;
+        }
+
+        .modal-header h2 {
+            color: #173c38;
+            font-size: 23px;
+        }
+
+        .close {
+            border: none;
+            background: #f1f5f9;
+
+            width: 38px;
+            height: 38px;
+
+            border-radius: 50%;
+
+            cursor: pointer;
+            font-size: 20px;
+
+            transition: 0.3s;
+        }
+
+        .close:hover {
+            background: #21998A;
+            color: white;
+        }
+
+        /* ================= SECTIONS ================= */
+
+        .booking-section {
+            margin-bottom: 28px;
+        }
+
+        .booking-section h3 {
+            font-size: 16px;
+            margin-bottom: 15px;
+            color: #334155;
+        }
+
+        /* ================= CALENDAR ================= */
+
+        .calendar {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 8px;
+        }
+
+        .day {
+            border: none;
+            background: #f1f5f9;
+
+            padding: 13px 5px;
+
+            border-radius: 9px;
+
+            cursor: pointer;
+
+            font-size: 13px;
+
+            transition: 0.25s;
+        }
+
+        .day:hover:not(:disabled) {
+            background: #d8f3ef;
+        }
+
+        .day.selected {
+            background: #21998A;
+            color: white;
+        }
+
+        .day:disabled {
+            color: #cbd5e1;
+            cursor: not-allowed;
+            background: #f8fafc;
+        }
+
+        /* ================= TIME ================= */
+
+        .time-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+        }
+
+        .time-btn {
+            border: 1px solid #dbe5e3;
+            background: white;
+
+            padding: 12px;
+
+            border-radius: 9px;
+
+            cursor: pointer;
+
+            transition: 0.25s;
+        }
+
+        .time-btn:hover,
+        .time-btn.selected {
+            background: #21998A;
+            color: white;
+            border-color: #21998A;
+        }
+
+        /* ================= FORM ================= */
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 13px;
+            margin-bottom: 7px;
+            color: #475569;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+
+            border: 1px solid #dbe5e3;
+
+            padding: 13px;
+
+            border-radius: 9px;
+
+            outline: none;
+
+            font-size: 14px;
+
+            transition: 0.25s;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            border-color: #21998A;
+
+            box-shadow: 0 0 0 3px rgba(33,153,138,0.1);
+        }
+
+        .form-group textarea {
+            height: 90px;
+            resize: none;
+        }
+
+        /* ================= CONFIRM ================= */
+
+        .confirm-btn {
+            width: 100%;
+
+            border: none;
+
+            background: #21998A;
+            color: white;
+
+            padding: 14px;
+
+            border-radius: 10px;
+
+            font-weight: bold;
+            font-size: 15px;
+
+            cursor: pointer;
+
+            box-shadow: 0 8px 20px rgba(33,153,138,0.25);
+
+            transition: 0.3s;
+        }
+
+        .confirm-btn:hover {
+            background: #187c70;
+            transform: translateY(-2px);
+        }
+
+        /* ================= RESPONSIVE ================= */
+
+        @media (max-width: 900px) {
+
+            .doctor-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+        }
+
+        @media (max-width: 600px) {
+
+            header h1 {
+                font-size: 30px;
+            }
+
+            .doctor-container {
+                grid-template-columns: 1fr;
+            }
+
+            .time-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .modal-content {
+                padding: 22px;
+            }
+
+        }
+
+   
