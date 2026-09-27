@@ -572,7 +572,7 @@ body {
 
     border-radius: 10px;
 
-    background: #f7fafc;
+    background: #ffffff;
 
     display: flex;
 
@@ -640,6 +640,7 @@ body {
     box-shadow:
         0 2px 5px rgba(0,0,0,.08);
 }
+
 
 
 .product-two .medicine-box {
@@ -814,7 +815,11 @@ body {
 
     margin-bottom: 9px;
 }
-
+.product-card:hover .product-image{
+    transform: rotate(45deg);
+    box-shadow: 0 12px 30px rgba(37, 99, 245, 0, 0.18);
+    transition: all 0.3s ease;
+}
 
 .product-btn {
     width: 100%;
