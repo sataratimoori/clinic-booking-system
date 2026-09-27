@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Doctor Booking</title>
+
+</head>
+
+<body>
+
+
+<!-- ================= HEADER ================= -->
+
+<header>
+
+    <h1>Find Your Doctor</h1>
+
+    <p>
+        Choose a specialist and book your appointment easily.
+    </p>
+
+</header>
+
+
+<!-- ================= FILTER ================= -->
+
+<div class="filter-container">
+
+    <button class="filter-btn active" data-filter="all">
+        All
+    </button>
+
+    <button class="filter-btn" data-filter="surgery">
+        Surgery
+    </button>
+
+    <button class="filter-btn" data-filter="women">
+        Women's Health
+    </button>
+
+    <button class="filter-btn" data-filter="heart">
+        Heart
+    </button>
+
+    <button class="filter-btn" data-filter="children">
+        Children
+    </button>
+
+    <button class="filter-btn" data-filter="general">
+        General
+    </button>
+
+</div>
+
+
+<!-- ================= DOCTORS ================= -->
+
+<div class="doctor-container">
+
+
+    <!-- Doctor 1 -->
+
+    <div class="doctor-card" data-category="surgery">
+
+        <img
+            class="doctor-image"
+            src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=800&q=80"
+            alt="Doctor">
+
+        <div class="doctor-info">
+
+            <h3>Dr. Sarah Johnson</h3>
+
+            <div class="specialty">
+                General Surgeon
+            </div>
+
+            <div class="doctor-type">
+                Adults Only
+            </div>
+
+            <p class="description">
+                Experienced surgeon focused on safe and effective surgical care.
+            </p>
+
+            <button
+                class="book-btn"
+                onclick="openModal('Dr. Sarah Johnson')">
+                Book Now
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- Doctor 2 -->
+
+    <div class="doctor-card" data-category="women">
+
+        <img
+            class="doctor-image"
+            src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?auto=format&fit=crop&w=800&q=80"
+            alt="Doctor">
+
+        <div class="doctor-info">
+
+            <h3>Dr. Emily Carter</h3>
+
+            <div class="specialty">
+                Women's Health
+            </div>
+
+            <div class="doctor-type">
+                Adults Only
+            </div>
+
+            <p class="description">
+                Dedicated to women's health, wellness and personalized care.
+            </p>
+
+            <button
+                class="book-btn"
+                onclick="openModal('Dr. Emily Carter')">
+                Book Now
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- Doctor 3 -->
+
+    <div class="doctor-card" data-category="heart">
+
+        <img
+            class="doctor-image"
+            src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=800&q=80"
+            alt="Doctor">
+
+        <div class="doctor-info">
+
+            <h3>Dr. Michael Brown</h3>
+
+            <div class="specialty">
+                Cardiologist
+            </div>
+
+            <div class="doctor-type">
+                Adults Only
+            </div>
+
+            <p class="description">
+                Heart specialist providing modern and personalized cardiac care.
+            </p>
+
+            <button
+                class="book-btn"
+                onclick="openModal('Dr. Michael Brown')">
+                Book Now
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- Doctor 4 -->
+
+    <div class="doctor-card" data-category="children">
+
+        <img
+            class="doctor-image"
+            src="https://images.unsplash.com/photo-1584982751601-97dcc096659c?auto=format&fit=crop&w=800&q=80"
+            alt="Doctor">
+
+        <div class="doctor-info">
+
+            <h3>Dr. Olivia Wilson</h3>
+
+            <div class="specialty">
+                Pediatrician
+            </div>
+
+            <div class="doctor-type">
+                Children
+            </div>
+
+            <p class="description">
+                Caring pediatrician helping children grow healthy and strong.
+            </p>
+
+            <button
+                class="book-btn"
+                onclick="openModal('Dr. Olivia Wilson')">
+                Book Now
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- Doctor 5 -->
+
+    <div class="doctor-card" data-category="general">
+
+        <img
+            class="doctor-image"
+            src="https://images.unsplash.com/photo-1537368910025-700350fe46c7?auto=format&fit=crop&w=800&q=80"
+            alt="Doctor">
+
+        <div class="doctor-info">
+
+            <h3>Dr. Daniel Miller</h3>
+
+            <div class="specialty">
+                General Physician
+            </div>
+
+            <div class="doctor-type">
+                Adults & Children
+            </div>
+
+            <p class="description">
+                General physician providing friendly and comprehensive care.
+            </p>
+
+            <button
+                class="book-btn"
+                onclick="openModal('Dr. Daniel Miller')">
+                Book Now
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- Doctor 6 -->
+
+    <div class="doctor-card" data-category="heart">
+
+        <img
+            class="doctor-image"
+            src="https://images.unsplash.com/photo-1618498082410-b4aa22193b38?auto=format&fit=crop&w=800&q=80"
+            alt="Doctor">
+
+        <div class="doctor-info">
+
+            <h3>Dr. James Anderson</h3>
+
+            <div class="specialty">
+                Heart Specialist
+            </div>
+
+            <div class="doctor-type">
+                Adults & Children
+            </div>
+
+            <p class="description">
+                Specialist in heart health with a patient-focused approach.
+            </p>
+
+            <button
+                class="book-btn"
+                onclick="openModal('Dr. James Anderson')">
+                Book Now
+            </button>
+
+        </div>
+
+    </div>
+
+
+</div>
+
+
+<!-- ================= MODAL ================= -->
+
+<div class="modal" id="bookingModal">
+
+    <div class="modal-content">
+
+
+        <div class="modal-header">
+
+            <h2 id="doctorName">
+                Book Appointment
+            </h2>
+
+            <button
+                class="close"
+                onclick="closeModal()">
+                ×
+            </button>
+
+        </div>
+
+
+        <!-- Pick a Day -->
+
+        <div class="booking-section">
+
+            <h3>
+                Pick a Day
+            </h3>
+
+            <div class="calendar">
+
+                <button class="day selected">
+                    27
+                </button>
+
+                <button class="day">
+                    28
+                </button>
+
+                <button class="day" disabled>
+                    29
+                </button>
+
+                <button class="day">
+                    30
+                </button>
+
+                <button class="day">
+                    01
+                </button>
+
+                <button class="day" disabled>
+                    02
+                </button>
+
+                <button class="day">
+                    03
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- Pick a Time -->
+
+        <div class="booking-section">
+
+            <h3>
+                Pick a Time
+            </h3>
+
+            <div class="time-container">
+
+                <button class="time-btn">
+                    09:00 AM
+                </button>
+
+                <button class="time-btn">
+                    10:00 AM
+                </button>
+
+                <button class="time-btn">
+                    11:30 AM
+                </button>
+
+                <button class="time-btn">
+                    01:00 PM
+                </button>
+
+                <button class="time-btn">
+                    03:00 PM
+                </button>
+
+                <button class="time-btn">
+                    04:30 PM
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- Your Details -->
+
+        <div class="booking-section">
+
+            <h3>
+                Your Details
+            </h3>
+
+
+            <div class="form-group">
+
+                <label>
+                    Full Name
+                </label>
+
+                <input
+                    type="text"
+                    id="fullName"
+                    placeholder="Enter your full name">
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>
+                    Phone Number
+                </label>
+
+                <input
+                    type="tel"
+                    id="phone"
+                    placeholder="Enter your phone number">
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>
+                    Reason for Visit
+                </label>
+
+                <textarea
+                    id="reason"
+                    placeholder="Tell us briefly about your visit"></textarea>
+
+            </div>
+
+        </div>
+
+
+        <button
+            class="confirm-btn"
+            onclick="confirmBooking()">
+
+            Confirm Booking
+
+        </button>
+
+
+    </div>
+
+</div>
+
+
+
+<script>
+
+    /* ================= FILTER ================= */
+
+    const filterButtons =
+        document.querySelectorAll(".filter-btn");
+
+    const doctorCards =
+        document.querySelectorAll(".doctor-card");
+
+
+    filterButtons.forEach(button => {
+
+        button.addEventListener("click", () => {
+
+            filterButtons.forEach(btn => {
+
+                btn.classList.remove("active");
+
+            });
+
+            button.classList.add("active");
+
+
+            const filter =
+                button.getAttribute("data-filter");
+
+
+            doctorCards.forEach(card => {
+
+                const category =
+                    card.getAttribute("data-category");
+
+
+                if (
+                    filter === "all" ||
+                    category === filter
+                ) {
+
+                    card.style.display = "block";
+
+                } else {
+
+                    card.style.display = "none";
+
+                }
+
+            });
+
+        });
+
+    });
+
+
+    /* ================= MODAL ================= */
+
+    const modal =
+        document.getElementById("bookingModal");
+
+
+    function openModal(doctor) {
+
+        document.getElementById("doctorName").textContent =
+            doctor;
+
+        modal.classList.add("active");
+
+        document.body.style.overflow = "hidden";
+
+    }
+
+
+    function closeModal() {
+
+        modal.classList.remove("active");
+
+        document.body.style.overflow = "auto";
+
+    }
+
+
+    /* Close modal by clicking outside */
+
+    modal.addEventListener("click", function(event) {
+
+        if (event.target === modal) {
+
+            closeModal();
+
+        }
+
+    });
+
+
+    /* ================= DAYS ================= */
+
+    const days =
+        document.querySelectorAll(".day");
+
+
+    days.forEach(day => {
+
+        day.addEventListener("click", function() {
+
+            if (this.disabled) return;
+
+
+            days.forEach(d => {
+
+                d.classList.remove("selected");
+
+            });
+
+
+            this.classList.add("selected");
+
+        });
+
+    });
+
+
+    /* ================= TIMES ================= */
+
+    const timeButtons =
+        document.querySelectorAll(".time-btn");
+
+
+    timeButtons.forEach(button => {
+
+        button.addEventListener("click", function() {
+
+            timeButtons.forEach(btn => {
+
+                btn.classList.remove("selected");
+
+            });
+
+
+            this.classList.add("selected");
+
+        });
+
+    });
+
+
+    /* ================= CONFIRM BOOKING ================= */
+
+    function confirmBooking() {
+
+        const name =
+            document.getElementById("fullName").value.trim();
+
+        const phone =
+            document.getElementById("phone").value.trim();
+
+        const reason =
+            document.getElementById("reason").value.trim();
+
+
+        const selectedDay =
+            document.querySelector(".day.selected");
+
+        const selectedTime =
+            document.querySelector(".time-btn.selected");
+
+
+        if (!name || !phone || !reason) {
+
+            alert("Please complete all your details.");
+
+            return;
+
+        }
+
+
+        if (!selectedDay) {
+
+            alert("Please select a day.");
+
+            return;
+
+        }
+
+
+        if (!selectedTime) {
+
+            alert("Please select a time.");
+
+            return;
+
+        }
+
+
+        alert(
+            "Booking Confirmed!\n\n" +
+            "Doctor: " +
+            document.getElementById("doctorName").textContent +
+            "\nDate: " +
+            selectedDay.textContent +
+            "\nTime: " +
+            selectedTime.textContent
+        );
+
+
+        closeModal();
+
+    }
+
+</script>
+
+</body>
+</html>
