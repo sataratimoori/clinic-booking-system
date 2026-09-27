@@ -1120,7 +1120,7 @@ body {
 }
 
 .navbar .nav-link {
-  color: rgba(255, 255, 255, 0.9) !important;
+  color: var(--teal)
 
   font-size: 11px;
 
